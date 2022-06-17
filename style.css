@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+  text-transform: capitalize;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+main {
+  display: grid;
+  gap: 1em;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1em;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+main > div > p {
+  text-align: center;
+}
+.second {
+  grid-column: 3/4;
+}
+.featured {
+  grid-column: 2/3;
+}
+.content {
+  grid-column: 1/2;
+  display: grid;
+  gap: 0.4em;
+}
+.content p {
+  text-align: left;
+}
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: darkcyan;
+}
+p {
+  font-size: 0.9rem;
+}
+section {
+  grid-column: 3/4;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+@media (max-width: 760px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .content {
+    grid-column: 1/-1;
+  }
+  .featured {
+    grid-column: 1/-1;
+  }
+  .second {
+    grid-column: 1/-1;
+  }
+  section {
+    grid-column: 1/-1;
+    text-align: center;
+  }
+}
